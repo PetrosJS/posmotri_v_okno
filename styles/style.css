@@ -1,7 +1,7 @@
 .page {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 133px 30px;
   inline-size: 1200px;
   block-size: 100%;
@@ -28,7 +28,6 @@
 .content__list {
   position: relative;
   overflow: auto;
-  overflow-x: hidden;
   width: 399px;
   height: 299px;
 }
@@ -68,18 +67,20 @@
   width: 194px;
   height: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-description-container {
   /*? flex-grow: 1;*/
   width: 200px;
-  height: 101px;
+  min-height: 101px;
   padding: 2px 0px 2px 2px;
 }
 
 .result__video-container {
   position: relative;
 }
+
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
@@ -88,7 +89,7 @@
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 94%;
   font-size: 75px;
@@ -97,6 +98,10 @@
 
 .content__accent {
   color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link {
@@ -115,13 +120,21 @@
 }
 
 .content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
   outline: 1px solid #ffffff;
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -133,14 +146,14 @@
 }
 
 .search-form__textfield {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
   font-size: 18px;
   border: none;
   border-bottom: solid 1px #fff;
   border-top: solid 1px #fff;
   inline-size: 225px;
   block-size: 27px;
-  background-color: #1b1919;
+  background-color: transparent;
   cursor: pointer;
   appearance: none;
 }
@@ -181,7 +194,7 @@
 /*? ЧЕКБОКСЫ */
 
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   width: 194px;
@@ -198,14 +211,13 @@
 }
 
 .button:hover,
-.search-form__label:hover,
+.search-form__label-text:hover,
 .content__card-link:hover {
   border-bottom: #fff 1px solid;
   cursor: pointer;
 }
 
-.button:active,
-.content__list-item:active {
+.button:active {
   background-color: #545050;
 }
 
