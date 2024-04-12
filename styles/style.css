@@ -1,6 +1,5 @@
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 133px 30px;
   inline-size: 1200px;
@@ -17,6 +16,8 @@
   /*  justify-content: space-between;*/
   align-items: flex-end;
   gap: 30px;
+  margin-top: 35px;
+  margin-bottom: 6px;
 }
 
 .search-form {
@@ -205,7 +206,7 @@
 /*? ЧЕКБОКСЫ */
 
 .button {
-  margin-top: 15px;
+  margin-top: 17px;
   font-family: Fira Sans Condensed, Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
